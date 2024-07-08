@@ -22,7 +22,7 @@ jobs:
                       cache: true
 
                - name: Check formatting
-                 run: lune run fmt src/ --check
+                 run: lune run fmt src/ -- --check
 
      lint:
           needs: ["fmt"]
