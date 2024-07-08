@@ -6,6 +6,8 @@ require("luau-lsp").config({
                     mode = "relativeToFile",
                     directoryAliases = {
                         ["@lune"] = "~/.lune/.typedefs/0.8.6/",
+                        ["@lib"] = "./lib",
+                        ["@src"] = "./src",
                     },
                 },
                 completion = {

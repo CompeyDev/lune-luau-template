@@ -1,7 +1,8 @@
+local makeHello = require("@lib/")
 local process = require("@lune/process")
 
-function main(_args: { string }): number?
-    print("Hello, world!")
+function main(args: { string }): number?
+    print(makeHello(args[1] or "world"))
     return 0
 end
 

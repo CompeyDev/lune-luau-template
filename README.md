@@ -5,7 +5,7 @@ This is a template for initializing [Luau](https://luau-lang.org) projects with 
 ## What is included in this template?
 
 - A barebones structure for an executable hello world Lune script (src/)
-- A barebones structure for a library (lib/) -- TODO
+- A barebones structure for a library (lib/)
 - Configuration files for various tooling: 
     - aftman for toolchain management (aftman.toml)
     - stylua for code formatting (stylua.toml, lune.yml)
