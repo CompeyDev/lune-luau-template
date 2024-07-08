@@ -1,6 +1,6 @@
 # lune-luau-template
 
-This is a template for initializing a non-library [Luau](https://luau-lang.org) project with [Lune](https://lune-org.github.io/docs).
+This is a template for initializing [Luau](https://luau-lang.org) projects with [Lune](https://lune-org.github.io/docs).
 
 ## What is included in this template?
 
