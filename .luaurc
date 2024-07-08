@@ -1,0 +1,11 @@
+{
+  "languageMode": "strict",
+  "lint": {
+    "*": true,
+    "FunctionUnused": false
+  },
+  "lintErrors": true,
+  "globals": [
+    "warn"
+  ]
+}
