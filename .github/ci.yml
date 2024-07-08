@@ -1,0 +1,48 @@
+name: CI
+
+on:
+     push:
+     pull_request:
+     workflow_dispatch:
+
+defaults:
+     run:
+          shell: bash
+
+jobs:
+     fmt:
+          runs-on: ubuntu-latest
+          steps:
+               - name: Checkout repository
+                 uses: actions/checkout@v4
+
+               - name: Install tooling
+                 uses: ok-nick/setup-aftman@v0.4.2
+                 with:
+                      cache: true
+
+               - name: Check formatting
+                 run: lune run fmt src/ --check
+
+     lint:
+          needs: ["fmt"]
+          runs-on: ubuntu-latest
+          steps:
+               - name: Checkout repository
+                 uses: actions/checkout@v4
+                 with:
+                      submodules: true
+
+               - name: Install tooling
+                 uses: ok-nick/setup-aftman@v0.4.2
+                 with:
+                      cache: true
+
+               - name: Initialize typedefs 
+                 run: lune setup
+
+               - name: Typecheck
+                 run: lune run typecheck
+
+               - name: Lint
+                 run: lune run lint

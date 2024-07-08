@@ -16,4 +16,4 @@ This is a template for initializing [Luau](https://luau-lang.org) projects with 
     - Linting
     - Typechecking
 - Unit-testing setup (tests/) -- TODO
-- GitHub Actions CI configuration to lints and tests (.github) -- TODO
+- GitHub Actions CI configuration to lints and tests (.github)
